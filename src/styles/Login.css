@@ -1,0 +1,155 @@
+/* 🌌 Full Page Layout */
+.login-container {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: radial-gradient(circle at top left, #0a192f, #1b2735);
+  color: #fff;
+  padding-top: 90px; /* prevents navbar overlap */
+  box-sizing: border-box;
+}
+
+/* 🧠 Login Card */
+.login-box {
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(15px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 20px;
+  padding: 40px;
+  width: 380px;
+  text-align: center;
+  box-shadow: 0 8px 25px rgba(0, 217, 255, 0.15);
+  animation: fadeIn 0.7s ease-in-out;
+}
+
+.login-box h2 {
+  margin-bottom: 25px;
+  color: #00d9ff;
+  font-weight: 700;
+}
+
+/* 🧩 Input Fields */
+.login-box input {
+  width: 100%;
+  margin: 10px 0;
+  padding: 12px;
+  border-radius: 10px;
+  border: none;
+  background: rgba(255, 255, 255, 0.1);
+  color: white;
+  font-size: 14px;
+  outline: none;
+  transition: 0.3s ease;
+}
+
+.login-box input:focus {
+  background: rgba(255, 255, 255, 0.15);
+  box-shadow: 0 0 8px rgba(0, 217, 255, 0.5);
+}
+
+/* 💡 Button */
+.login-btn {
+  width: 100%;
+  padding: 12px;
+  border: none;
+  border-radius: 25px;
+  background: linear-gradient(90deg, #00d9ff, #0072ff);
+  color: white;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-size: 16px;
+  margin-top: 10px;
+}
+
+.login-btn:hover {
+  box-shadow: 0 0 15px rgba(0, 217, 255, 0.5);
+  transform: translateY(-2px);
+}
+
+/* 🔁 Switch between Login/Signup */
+.switch-text {
+  margin-top: 20px;
+  font-size: 14px;
+  color: #b0c4de;
+}
+
+.switch-text span {
+  color: #00d9ff;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.switch-text span:hover {
+  text-decoration: underline;
+}
+
+/* 🌐 Google Button */
+.google-btn {
+  margin-top: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  width: 100%;
+  padding: 12px;
+  border: none;
+  border-radius: 8px;
+  background: white;
+  color: #333;
+  font-weight: 600;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.google-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+}
+
+.google-btn img {
+  width: 22px;
+  height: 22px;
+}
+
+/* 🚪 Logout */
+.logout-btn {
+  background: linear-gradient(90deg, #ff416c, #ff4b2b);
+  border: none;
+  padding: 12px;
+  border-radius: 8px;
+  color: white;
+  width: 100%;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.logout-btn:hover {
+  box-shadow: 0 0 15px rgba(255, 75, 43, 0.5);
+}
+
+/* ✨ Animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* 📱 Responsive */
+@media (max-width: 480px) {
+  .login-box {
+    width: 90%;
+    padding: 25px;
+  }
+
+  .login-btn {
+    font-size: 14px;
+  }
+}

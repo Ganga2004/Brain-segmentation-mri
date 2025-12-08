@@ -1,0 +1,219 @@
+/* 🌌 Main Page Layout */
+.mvp-container {
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+  flex-wrap: wrap;
+  gap: 40px;
+  padding: 100px 5%;
+  min-height: 90vh;
+  background: linear-gradient(135deg, #0a192f, #1b2735);
+  font-family: "Poppins", sans-serif;
+  color: #eaf4ff;
+}
+
+/* 🧩 Card Layout (Equal Size for Upload + Chat) */
+.mvp-card {
+  flex: 1;
+  min-width: 350px;
+  max-width: 500px;
+  height: 600px; /* Ensures both cards are equal height */
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(15px);
+  border-radius: 15px;
+  padding: 30px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.25);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: all 0.3s ease-in-out;
+}
+
+.mvp-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 10px 30px rgba(0, 217, 255, 0.25);
+}
+
+/* 🔹 Section Headers */
+.mvp-card h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #00d9ff;
+  font-weight: 700;
+}
+
+/* 🖼 Upload Box */
+.upload-box {
+  border: 2px dashed rgba(0, 217, 255, 0.5);
+  border-radius: 12px;
+  padding: 30px;
+  text-align: center;
+  color: #b0c4de;
+  cursor: pointer;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.05);
+  transition: 0.3s ease;
+}
+
+.upload-box:hover {
+  background: rgba(0, 217, 255, 0.1);
+  box-shadow: 0 0 20px rgba(0, 217, 255, 0.2);
+}
+
+/* Uploaded Image */
+.uploaded-image {
+  width: 100%;
+  margin-top: 15px;
+  border-radius: 10px;
+  box-shadow: 0 0 15px rgba(0, 217, 255, 0.3);
+}
+
+/* 🧪 Buttons */
+.diagnosis-button,
+.save-button,
+.login-btn {
+  background: linear-gradient(90deg, #00d9ff, #0072ff);
+  color: white;
+  border: none;
+  border-radius: 30px;
+  padding: 12px 25px;
+  font-weight: 600;
+  cursor: pointer;
+  font-size: 15px;
+  transition: all 0.3s ease;
+  margin-top: 15px;
+}
+
+.diagnosis-button:hover,
+.save-button:hover,
+.login-btn:hover {
+  box-shadow: 0 0 15px rgba(0, 217, 255, 0.5);
+  transform: translateY(-3px);
+}
+
+.save-button {
+  background: linear-gradient(90deg, #007bff, #00e0ff);
+}
+
+/* 📄 Diagnosis Result */
+.diagnosis-result {
+  margin-top: 15px;
+  background: rgba(255, 255, 255, 0.08);
+  padding: 15px;
+  border-radius: 10px;
+  font-size: 14px;
+  box-shadow: 0 0 10px rgba(0, 217, 255, 0.15);
+}
+
+/* 💬 Chatbot Section */
+.chatbot-messages {
+  flex-grow: 1;
+  overflow-y: auto;
+  background: rgba(255, 255, 255, 0.05);
+  padding: 20px;
+  border-radius: 10px;
+  margin-bottom: 15px;
+}
+
+.chatbot-message {
+  margin: 6px 0;
+  padding: 10px 14px;
+  border-radius: 12px;
+  max-width: 75%;
+  word-wrap: break-word;
+  line-height: 1.4;
+}
+
+.user-message {
+  background: rgba(0, 217, 255, 0.3);
+  margin-left: auto;
+}
+
+.bot-message {
+  background: rgba(255, 255, 255, 0.15);
+  margin-right: auto;
+}
+
+/* 🧠 Chat Input */
+.chatbot-input {
+  display: flex;
+  gap: 10px;
+}
+
+.chatbot-input input {
+  flex: 1;
+  padding: 12px;
+  border-radius: 10px;
+  border: none;
+  background: rgba(255, 255, 255, 0.1);
+  color: white;
+  outline: none;
+  transition: 0.3s;
+}
+
+.chatbot-input input:focus {
+  background: rgba(255, 255, 255, 0.2);
+  box-shadow: 0 0 8px rgba(0, 217, 255, 0.3);
+}
+
+.chatbot-input button {
+  background: linear-gradient(90deg, #00d9ff, #0072ff);
+  border: none;
+  border-radius: 10px;
+  color: white;
+  padding: 12px 20px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.chatbot-input button:hover {
+  box-shadow: 0 0 12px rgba(0, 217, 255, 0.4);
+  transform: translateY(-2px);
+}
+
+/* 🚪 Login Prompt */
+.login-prompt {
+  text-align: center;
+  padding: 40px 20px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.login-text {
+  color: #b0c4de;
+  margin-bottom: 15px;
+  font-size: 15px;
+}
+
+/* 📱 Responsive Design */
+@media (max-width: 900px) {
+  .mvp-container {
+    flex-direction: column;
+    align-items: center;
+    padding: 80px 5%;
+  }
+
+  .mvp-card {
+    width: 100%;
+    max-width: 600px;
+    height: auto;
+  }
+}
+
+@media (max-width: 600px) {
+  .mvp-card {
+    padding: 20px;
+  }
+
+  .diagnosis-button,
+  .save-button {
+    font-size: 14px;
+    padding: 10px 20px;
+  }
+}

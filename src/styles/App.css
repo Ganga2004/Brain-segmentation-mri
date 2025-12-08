@@ -1,0 +1,84 @@
+body {
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+  background: radial-gradient(circle at top left, #0f2027, #203a43, #2c5364);
+  color: #e0e0e0;
+  overflow-x: hidden;
+}
+
+.page-content {
+  padding-top: 90px; 
+}
+
+
+h1, h2, h3 {
+  color: #fff;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 40px;
+  background-color: #0a2540;
+  color: white;
+}
+
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  margin: 0 15px;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+  color: #00c9ff;
+}
+
+.home-container {
+  text-align: center;
+  padding: 50px;
+}
+
+.brain-img {
+  width: 50%;
+  border-radius: 20px;
+  margin-top: 30px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.mvp-container,
+.saved-container {
+  text-align: center;
+  padding: 50px;
+}
+
+.mvp-container img,
+.saved-container img {
+  width: 300px;
+  margin: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+button {
+  padding: 10px 20px;
+  background-color: #0078ff;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 16px;
+  margin: 10px;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
